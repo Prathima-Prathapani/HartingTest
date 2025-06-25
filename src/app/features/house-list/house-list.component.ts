@@ -22,10 +22,9 @@ import { merge, startWith, switchMap, map } from 'rxjs';
 export class HouseListComponent implements OnInit {
   displayedColumns = ['name', 'region','titles','words','House Details'];
   data: House[] = [];
-  resultsLength = 0;
+  
   isLoading = true;
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
   
 
   constructor(private houses: HouseService, private router: Router) {}
@@ -34,7 +33,7 @@ export class HouseListComponent implements OnInit {
     
       this.houses.getHouseData().subscribe({
       next: (data) => {
-        this.resultsLength = data.length;
+     
         this.data = data;
        
         this.isLoading = false;

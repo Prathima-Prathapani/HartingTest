@@ -4,7 +4,7 @@
   <div class="title"> Game of Thrones Houses</div>
 
 
-<table mat-table [dataSource]="data" matSort (matSortChange)="paginator.firstPage()" class="mat-elevation-z2">
+<table mat-table [dataSource]="data" matSort  class="mat-elevation-z2">
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
@@ -37,5 +37,5 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="onRowClick(row)"></tr>
 </table>
-<mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+
 </div>
