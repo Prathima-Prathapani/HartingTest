@@ -1,0 +1,28 @@
+
+
+<mat-card *ngIf="house" class="mat-elevation-z4">
+  <mat-card-title style="margin-bottom: 5px;
+    padding: 15px; font-weight: 500;">{{ house.name }}</mat-card-title>
+
+  <mat-card-content>
+    <p><strong>Region:</strong> {{ house.region }}</p>
+
+    <p><strong>Words:</strong> {{ house.words || 'No words' }}</p>
+    <p><strong>Founded:</strong> {{ house.founded || 'Unknown' }}</p>
+    
+
+    <p *ngIf="house.currentLord">
+      <strong>Current Lord:</strong>
+      <a [href]="house.currentLord" target="_blank">API Link</a>
+    </p>
+    <p *ngIf="house.overlord">
+      <strong>Overlord House:</strong>
+      
+       <a href="javascript: void(0);" (click)="loadHouse(house.overlord)" class="link">API Link</a>
+    </p>
+
+    <p><strong>Seats:</strong> {{ seats }}</p>
+    <p><strong>Titles:</strong> {{ titles }}</p>
+
+  </mat-card-content>
+</mat-card>
