@@ -30,5 +30,8 @@ export class HouseService {
    getHouseById(id: string): Observable<any> {
     return this.http.get<any>(`${this.api}/${id}`);
   }
-
+  
+  static idFromUrl(url: string): number {
+    return +url.split('/').pop()!;
+  }
 }

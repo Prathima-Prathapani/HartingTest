@@ -1,0 +1,44 @@
+th.mat-header-cell,
+td.mat-cell {
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.column-id {
+    flex: 0 0 100px;
+}
+
+.column-name {
+    flex: 0 0 200px;
+}
+
+.column-age {
+    flex: 0 0 150px;
+}
+
+.mat-row,
+.mat-header-row {
+    display: flex;
+}
+
+.mat-cell,
+.mat-header-cell {
+    display: flex;
+    align-items: center;
+}
+.container {
+  padding: 1rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+  position: relative;
+}
